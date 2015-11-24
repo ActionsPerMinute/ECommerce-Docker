@@ -118,11 +118,11 @@ copyAgents() {
 
 # Clone ECommerce source projects into docker build dirs
 cloneProjects() {
-  (cd ECommerce-Tomcat && rm -rf ECommerce-Java && git clone https://github.com/Appdynamics/ECommerce-Java.git) || exit $?
-  (cd ECommerce-FulfillmentClient && rm -rf ECommerce-Java && git clone https://github.com/Appdynamics/ECommerce-Java.git) || exit $?
+  (cd ECommerce-Tomcat && rm -rf ECommerce-Java && git clone https://github.com/Appdynamics/ECommerce-Java.git -b appsphere-2015) || exit $?
+  (cd ECommerce-FulfillmentClient && rm -rf ECommerce-Java && git clone https://github.com/Appdynamics/ECommerce-Java.git -b appsphere-2015) || exit $?
   (cd ECommerce-Angular && rm -rf ECommerce-Angular && git clone https://github.com/Appdynamics/ECommerce-Angular.git) || exit $?
   (cd ECommerce-Load && rm -rf ECommerce-Load && git clone https://github.com/Appdynamics/ECommerce-Load.git) || exit $?
-  (cd ECommerce-SurveyClient && git clone https://github.com/Appdynamics/ECommerce-Java.git) || exit $?
+  (cd ECommerce-SurveyClient && git clone https://github.com/Appdynamics/ECommerce-Java.git -b appsphere-2015) || exit $?
   (cd ECommerce-FaultInjection && git clone https://github.com/Appdynamics/ECommerce-FaultInjectionUI.git) || exit $?
   (cd ECommerce-Dbwrapper && git clone https://github.com/AppDynamics/docker-dbwrapper.git) || exit $?
 }
