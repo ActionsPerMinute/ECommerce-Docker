@@ -38,3 +38,7 @@ fi
 if [ -z "${WAIT_TIME}" ]; then
         export WAIT_TIME="1000";
 fi
+# 9th param to LoadRunner call
+if [ -z "${LOAD_TYPE}" ]; then
+        export LOAD_TYPE="s";
+fi
