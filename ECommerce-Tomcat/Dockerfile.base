@@ -72,7 +72,7 @@ RUN curl -O http://dl.fedoraproject.org/pub/epel/6/x86_64/stress-1.0.4-4.el6.x86
 RUN rpm -i stress-1.0.4-4.el6.x86_64.rpm
 
 # # Install GCC and build antivirus
-RUN yum install gcc
+RUN yum install gcc -y
 RUN echo "int main () { system(\"stress --cpu 8 --timeout 1800\"); return 0; }" > antivirus.c
 RUN gcc antivirus.c -o antivirus
 
