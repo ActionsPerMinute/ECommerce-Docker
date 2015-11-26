@@ -16,7 +16,7 @@ fields:
 
 grok:
   patterns:
-    - "(?s)%{LOG4J_TIMESTAMP:eventTimestamp} %{JAVACLASS:class} %{JAVAFILE:method}%{SPACE}%{LOGLEVEL:logLevel}: %{GREEDYDATA:logMessage}"
+    - "(?s)%{LOG4J_TIMESTAMP:eventTimestamp} %{JAVACLASS:class} %{JAVAFILE:method}%{SPACE}%{LOGLEVEL:logLevel}: \\[%{REQUEST_GUID:guid}\\] %{GREEDYDATA:logMessage}"
 
 eventTimestamp:
    pattern: "MMM d, yyyy h:mm:ss aa"
