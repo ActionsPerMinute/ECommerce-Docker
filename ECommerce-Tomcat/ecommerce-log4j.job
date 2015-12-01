@@ -9,7 +9,7 @@ multiline:
    startsWith: "["
 
 fields:
-   sourceType: ECommerce41-log4j
+   sourceType: ECommerce-log4j
    nodeName: _NODE_NAME
    tierName: _TIER_NAME
    appName: _APP_NAME
